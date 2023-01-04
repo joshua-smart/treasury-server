@@ -14,6 +14,8 @@ jobs:
     runs-on: ubuntu-latest
     steps:
     - uses: actions/checkout@v3
+      with:
+        submodules: recursive
     - name: Build
       run: cargo build
 
@@ -21,6 +23,8 @@ jobs:
     runs-on: ubuntu-latest
     steps:
     - uses: actions/checkout@v3
+      with:
+          submodules: recursive
     - name: Test
       run: cargo test
 
@@ -28,6 +32,8 @@ jobs:
     runs-on: ubuntu-latest
     steps:
     - uses: actions/checkout@v3
+      with:
+          submodules: recursive
     - name: Format
       run: cargo fmt -- --check
 
@@ -35,5 +41,7 @@ jobs:
     runs-on: ubuntu-latest
     steps:
     - uses: actions/checkout@v3
+      with:
+          submodules: recursive
     - name: Clippy
       run: cargo clippy --all-targets -- -D warnings
