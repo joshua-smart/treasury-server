@@ -1,9 +1,11 @@
 [package]
-name = "treasury-server"
-version = "0.1.0"
+name = "treasury_server"
+version = "1.0.0"
 edition = "2021"
 
 # See more keys and their definitions at https://doc.rust-lang.org/cargo/reference/manifest.html
 
 [dependencies]
-treasury-service = { path = "../treasury-service" }
+dotenvy = "0.15.6"
+rocket = { version = "0.5.0-rc.2", features = ["json"] }
+treasury_service = { path = "./treasury-service" }

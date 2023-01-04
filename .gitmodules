@@ -1,0 +1,3 @@
+[submodule "treasury-service"]
+	path = treasury-service
+	url = git@github.com:joshua-smart/treasury-service
